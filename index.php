@@ -48,3 +48,4 @@ foreach( $data as $id => $book ) {
   grid-template-columns: 14ch minmax( 6em, 12em ) minmax( 6em, 10em ) 1fr;
 }
 .item > div { padding: 0.125em; background: white; }
+</style>
