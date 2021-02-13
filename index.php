@@ -11,7 +11,7 @@
 <?php
 $fmt = '    <div>%s</div>';
 
-$data = json_decode( file_get_contents( './books.json' ), 1 )['books'];
+$data = json_decode( file_get_contents( './books.json' ), 1 )['books']; // Get the book data from the JSON data
 foreach( $data as $id => $book ) {
   $arr[] = '  <article class="item">';
   $arr[] = sprintf( $fmt, $book['isbn'] );
@@ -35,17 +35,16 @@ foreach( $data as $id => $book ) {
 .table {
   margin: 0.5em;
   display: grid;
+  gap: 2px; 
   grid-template-columns: 1fr;
-  grid-auto-rows: auto;
-  background: #eee;
-  gap: 2px;
-  border: 2px solid #eee;
+  grid-auto-rows: auto; // Allow any number of rows
+  background: #eee; border: 2px solid #eee; // Simulate table border
 }
 
 .item {
   display: grid;
   gap: 2px;
-  grid-template-columns: 14ch minmax( 6em, 12em ) minmax( 6em, 10em ) 1fr;
+  grid-template-columns: 14ch minmax( 6em, 12em ) minmax( 6em, 10em ) 1fr; // Set the column widths of the grid
 }
 .item > div { padding: 0.125em; background: white; }
 </style>
